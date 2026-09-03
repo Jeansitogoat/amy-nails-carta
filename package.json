@@ -1,0 +1,8 @@
+{
+  "name": "amy-nails-carta",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes serve . -p 3001",
+    "start": "npm run dev"
+  }
+}
