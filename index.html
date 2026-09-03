@@ -404,7 +404,7 @@
                             </div>
                         </button>
                         <button type="button" onclick="abrirPortafolio('unasgel')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
-                            <img src="media/unas-gel.png" alt="Uñas en gel" class="catalog-thumb">
+                            <img src="media/unas-gel-1.png" alt="Uñas en gel" class="catalog-thumb">
                             <div class="px-3 py-3">
                                 <p class="font-serif text-[15px] leading-tight">Uñas en gel</p>
                                 <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$10</span>
@@ -505,11 +505,14 @@
             },
             unasgel: {
                 titulo: 'Uñas en gel',
-                subtitulo: 'Desde $10',
+                subtitulo: 'Desde $10 · manos y pedicura',
                 servicio: 'Uñas en gel',
                 items: [
-                    { type: 'image', src: 'media/unas-gel.png', alt: 'Uñas en gel' },
-                    { type: 'image', src: 'media/trabajo-1.png', alt: 'Nail art en gel' },
+                    { type: 'image', src: 'media/unas-gel-1.png', alt: 'Uñas en gel — flor y gold' },
+                    { type: 'image', src: 'media/unas-gel-2.png', alt: 'Uñas en gel — diseño geométrico' },
+                    { type: 'image', src: 'media/unas-gel-3.png', alt: 'Uñas en gel — color sólido' },
+                    { type: 'video', src: 'media/unas-gel.mp4', poster: 'media/unas-gel-1.png', alt: 'Video uñas en gel' },
+                    { type: 'image', src: 'media/pedicura.jpg', alt: 'Pedicura en gel', caption: 'Pedicura' },
                 ],
             },
             polygel: {
@@ -575,11 +578,18 @@
                 `;
             }
 
+            const caption = item.caption
+                ? `<figcaption class="px-4 py-3 flex items-center gap-2 bg-white/90 border-t border-nude-100 rounded-b-[calc(1.25rem-3px)]">
+                        <span class="font-sans text-[10px] uppercase tracking-[0.18em] text-accent">${item.caption}</span>
+                   </figcaption>`
+                : '';
+
             return `
                 ${wrapStart}
                 ${wrapInnerStart}
                     <img src="${item.src}" alt="${item.alt}" class="gallery-img w-full" loading="lazy" decoding="async">
                 </div>
+                ${caption}
                 </figure>
             `;
         }
