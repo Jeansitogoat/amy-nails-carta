@@ -2,13 +2,13 @@
 
 Catálogo móvil de [@amys_tudio](https://www.instagram.com/amys_tudio/). WhatsApp: +593 96 804 9787.
 
-## Carpeta
+## Enlace público (para clientes)
 
-```
-c:\Users\Usuario\amy-nails-carta\
-```
+**https://amy-studio-mu.vercel.app**
 
-Proyecto **aparte** de María José.
+Repo: [github.com/Jeansitogoat/amy-nails-carta](https://github.com/Jeansitogoat/amy-nails-carta)
+
+Cada `git push` a `main` dispara un deploy automático en Vercel.
 
 ## Ver en local
 
@@ -30,6 +30,9 @@ Abre [http://localhost:3001](http://localhost:3001).
 | polygel | $20 |
 | Acrílico | $22 |
 
-## Publicar
+## Cómo actualizar
 
-Repo + Vercel propios (no reutilizar el de Majo). Compartir **enlace web**, no el HTML suelto.
+1. Cambia fotos en `media/` o textos en `index.html`
+2. `git add . && git commit -m "mensaje" && git push`
+3. En ~1 minuto se actualiza **https://amy-studio-mu.vercel.app**
+
