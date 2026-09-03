@@ -624,9 +624,8 @@
         }
 
         function renderSlide(item, index, total) {
-            const label = item.caption || (item.type === 'video' ? 'Video' : '');
             const media = item.type === 'video'
-                ? `<video class="portfolio-video w-full aspect-[3/4] object-cover" muted loop playsinline preload="metadata" poster="${item.poster || ''}" aria-label="${item.alt}" disablePictureInPicture>
+                ? `<video class="portfolio-video w-full aspect-[3/4] object-cover" muted loop playsinline autoplay preload="auto" poster="${item.poster || ''}" aria-label="${item.alt}" disablePictureInPicture>
                         <source src="${item.src}" type="video/mp4">
                    </video>`
                 : `<img src="${item.src}" alt="${item.alt}" class="gallery-img" decoding="async">`;
@@ -635,7 +634,6 @@
                 <figure class="carousel-slide bezel-outer" data-index="${index}">
                     <div class="bezel-inner relative">
                         ${media}
-                        ${label ? `<span class="absolute left-3 bottom-3 z-10 font-sans text-[10px] uppercase tracking-[0.18em] bg-white/92 text-dark px-2.5 py-1 rounded-full">${label}</span>` : ''}
                     </div>
                 </figure>
             `;
@@ -655,10 +653,15 @@
         }
 
         function syncCarouselMedia(gallery, index) {
-            gallery.querySelectorAll('video').forEach((v, i) => {
+            gallery.querySelectorAll('.carousel-slide').forEach((slide, i) => {
+                const v = slide.querySelector('video');
+                if (!v) return;
+                v.muted = true;
+                v.defaultMuted = true;
                 if (i === index) {
-                    v.muted = true;
-                    v.play().catch(() => {});
+                    const play = () => v.play().catch(() => {});
+                    if (v.readyState >= 2) play();
+                    else v.addEventListener('canplay', play, { once: true });
                 } else {
                     v.pause();
                 }
@@ -666,9 +669,6 @@
             gallery.querySelectorAll('.carousel-thumb').forEach((btn, i) => {
                 btn.classList.toggle('is-active', i === index);
             });
-            const counter = gallery.querySelector('[data-counter]');
-            const total = gallery.querySelectorAll('.carousel-slide').length;
-            if (counter) counter.textContent = `${index + 1} / ${total}`;
         }
 
         function initCarousel(gallery) {
@@ -720,8 +720,7 @@
                 : '';
             const thumbs = total > 1
                 ? `<div class="carousel-thumbs mt-4">${data.items.map(renderThumb).join('')}</div>
-                   <p class="text-center font-sans text-[11px] text-gray-400 mt-3 tracking-wide" data-counter>1 / ${total}</p>
-                   <p class="text-center font-sans text-[10px] text-gray-400 mt-1">Desliza para ver más</p>`
+                   <p class="text-center font-sans text-[10px] text-gray-400 mt-3 tracking-wide">Desliza para ver más</p>`
                 : '';
 
             gallery.className = 'flex-1 px-4 py-5 scroll-pad-bottom';
