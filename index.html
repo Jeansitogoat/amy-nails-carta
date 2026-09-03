@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
-    <title>Amy | Nails & Beauty</title>
+    <title>Amy's Studio | Nails</title>
     
-    <meta name="description" content="Amy — manicure, soft gel, acrílico y nail art. Agenda tu cita por WhatsApp.">
+    <meta name="description" content="Amy's Studio — rubber base, builder gel, soft gel, polygel y acrílico. Agenda tu cita por WhatsApp.">
     <meta name="theme-color" content="#FAFAF8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -209,7 +209,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 38%;
+            object-position: center 45%;
             display: block;
         }
         .hero-media::after {
@@ -258,6 +258,13 @@
             object-fit: cover;
             width: 100%;
             transition: transform 0.8s var(--ease-out-expo);
+        }
+
+        .catalog-thumb {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            width: 100%;
+            display: block;
         }
 
         video.portfolio-video {
@@ -333,8 +340,8 @@
                         <div class="bezel-inner">
                             <div class="hero-media">
                                 <img
-                                    src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Manicure profesional — catálogo Amy Nails"
+                                    src="media/hero.jpg"
+                                    alt="Nail art profesional — Amy's Studio"
                                     decoding="async"
                                     fetchpriority="high"
                                     sizes="(max-width: 28rem) 100vw, 448px"
@@ -350,13 +357,13 @@
                 
                 <div class="safe-x px-6 sm:px-7 pt-6 pb-2 relative z-10 text-center">
                     <p class="font-sans text-[15px] text-gray-700 leading-[1.75] text-pretty text-justify mb-4">
-                        ¡Hola! Soy <strong class="text-dark font-medium">Amy</strong>.
+                        ¡Hola! Soy <strong class="text-dark font-medium">Amy</strong>, de <strong class="text-dark font-medium">Amy's Studio</strong>.
                     </p>
                     <p class="font-sans text-[15px] text-gray-700 leading-[1.75] text-pretty text-justify mb-4">
-                        Me apasiona el cuidado y el diseño de uñas. Trabajo con acabados limpios, duraderos y a tu estilo: desde un nude elegante hasta nail art con personalidad, para que te sientas segura en cada detalle.
+                        Me apasiona el cuidado y el diseño de uñas. Trabajo con acabados limpios, duraderos y a tu estilo: desde un nude elegante hasta nail art con personalidad.
                     </p>
                     <p class="font-sans text-[15px] text-gray-700 leading-[1.75] text-pretty text-justify mb-8">
-                        Ofrezco <strong class="text-dark font-medium">manicure</strong>, <strong class="text-dark font-medium">soft gel</strong>, <strong class="text-dark font-medium">acrílico</strong> y más. Este catálogo digital reemplaza el PDF: toca un servicio, mira resultados y agenda por WhatsApp.
+                        Toca un servicio para ver resultados y cotizar por WhatsApp. Precios desde el catálogo; el diseño extra se cotiza aparte.
                     </p>
                     
                     <div class="w-10 h-px bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-4"></div>
@@ -373,79 +380,60 @@
                 </div>
 
                 <div class="mb-10 reveal">
-                    <h3 class="font-sans font-medium tracking-[0.18em] text-[11px] text-accent uppercase mb-5 flex items-center gap-2">
-                        <span class="w-6 h-px bg-accent/40"></span>
-                        Manicure &amp; Gel
-                        <span class="flex-1 h-px bg-nude-200"></span>
-                    </h3>
-                    <div class="space-y-3">
-                        <button type="button" onclick="abrirPortafolio('manicure')" class="service-row w-full bg-white/90 p-4 min-h-[3.35rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 flex justify-between items-center gap-4 hover:border-accent/50 hover:shadow-[var(--shadow-warm-sm)] group">
-                            <span class="font-sans text-sm font-medium text-left text-dark">Manicure clásica</span>
-                            <span class="icon-pill w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-nude-100 flex items-center justify-center shrink-0 text-nude-300">
-                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                            </span>
-                        </button>
-                        <button type="button" onclick="abrirPortafolio('softgel')" class="service-row w-full bg-white/90 p-4 min-h-[3.35rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 flex justify-between items-center gap-4 hover:border-accent/50 hover:shadow-[var(--shadow-warm-sm)] group">
-                            <span class="font-sans text-sm font-medium text-left text-dark">Soft gel</span>
-                            <span class="icon-pill w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-nude-100 flex items-center justify-center shrink-0 text-nude-300">
-                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                            </span>
-                        </button>
-                        <button type="button" onclick="abrirPortafolio('acrilico')" class="service-row w-full bg-white/90 p-4 min-h-[3.35rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 flex justify-between items-center gap-4 hover:border-accent/50 hover:shadow-[var(--shadow-warm-sm)] group">
-                            <span class="font-sans text-sm font-medium text-left text-dark">Acrílico</span>
-                            <span class="icon-pill w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-nude-100 flex items-center justify-center shrink-0 text-nude-300">
-                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                            </span>
-                        </button>
-                        <button type="button" onclick="abrirPortafolio('nailart')" class="service-row w-full bg-white/90 p-4 min-h-[3.35rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 flex justify-between items-center gap-4 hover:border-accent/50 hover:shadow-[var(--shadow-warm-sm)] group">
-                            <span class="font-sans text-sm font-medium text-left text-dark">Nail art</span>
-                            <span class="icon-pill w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-nude-100 flex items-center justify-center shrink-0 text-nude-300">
-                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="mb-4 reveal">
-                    <h3 class="font-sans font-medium tracking-[0.18em] text-[11px] text-accent uppercase mb-5 flex items-center gap-2">
-                        <span class="w-6 h-px bg-accent/40"></span>
-                        Extras
-                        <span class="flex-1 h-px bg-nude-200"></span>
-                    </h3>
                     <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                        <button type="button" onclick="agendar('Pedicure')" class="tile-service bg-white/90 p-4 min-h-[5.75rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 text-center hover:border-accent/50 transition group flex flex-col items-center justify-center gap-2.5 active:scale-[0.98]">
-                            <span class="icon-pill w-10 h-10 rounded-full bg-nude-100 flex items-center justify-center">
-                                <i class="fa-solid fa-spa text-nude-400 group-hover:text-accent text-lg"></i>
-                            </span>
-                            <span class="block font-sans text-xs font-medium leading-snug">Pedicure</span>
+                        <button type="button" onclick="abrirPortafolio('rubber')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                            <img src="media/rubber-base.png" alt="Rubber base" class="catalog-thumb">
+                            <div class="px-3 py-3">
+                                <p class="font-serif text-[15px] leading-tight">rubber base</p>
+                                <p class="font-sans text-[10px] text-gray-500 mt-0.5">sin extensión</p>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$10</span>
+                            </div>
                         </button>
-                        <button type="button" onclick="agendar('Retoque / Relleno')" class="tile-service bg-white/90 p-4 min-h-[6rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 text-center hover:border-accent/50 transition group flex flex-col items-center justify-center gap-2.5 active:scale-[0.98]">
-                            <span class="icon-pill w-10 h-10 rounded-full bg-nude-100 flex items-center justify-center">
-                                <i class="fa-solid fa-rotate text-nude-400 group-hover:text-accent text-lg"></i>
-                            </span>
-                            <span class="block font-sans text-xs font-medium leading-snug">Retoque /<br>Relleno</span>
+                        <button type="button" onclick="abrirPortafolio('builder')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                            <img src="media/builder-gel.jpg" alt="Builder gel" class="catalog-thumb">
+                            <div class="px-3 py-3">
+                                <p class="font-serif text-[15px] leading-tight">builder gel</p>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$15</span>
+                            </div>
                         </button>
-                        <button type="button" onclick="agendar('Remoción de gel')" class="tile-service bg-white/90 p-4 min-h-[6rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 text-center hover:border-accent/50 transition group flex flex-col items-center justify-center gap-2.5 active:scale-[0.98]">
-                            <span class="icon-pill w-10 h-10 rounded-full bg-nude-100 flex items-center justify-center">
-                                <i class="fa-solid fa-hand text-nude-400 group-hover:text-accent text-lg"></i>
-                            </span>
-                            <span class="block font-sans text-xs font-medium leading-snug">Remoción<br>de gel</span>
+                        <button type="button" onclick="abrirPortafolio('softgel')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                            <img src="media/soft-gel.png" alt="Soft gel" class="catalog-thumb">
+                            <div class="px-3 py-3">
+                                <p class="font-serif text-[15px] leading-tight">soft gel</p>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$14</span>
+                            </div>
                         </button>
-                        <button type="button" onclick="agendar('Servicio a domicilio')" class="tile-service bg-white/90 p-4 min-h-[6rem] rounded-2xl shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] border border-nude-100/80 text-center hover:border-accent/50 transition group flex flex-col items-center justify-center gap-2.5 active:scale-[0.98]">
-                            <span class="icon-pill w-10 h-10 rounded-full bg-nude-100 flex items-center justify-center">
-                                <i class="fa-solid fa-house text-nude-400 group-hover:text-accent text-lg"></i>
-                            </span>
-                            <span class="block font-sans text-xs font-medium leading-snug">A<br>domicilio</span>
+                        <button type="button" onclick="abrirPortafolio('unasgel')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                            <img src="media/unas-gel.png" alt="Uñas en gel" class="catalog-thumb">
+                            <div class="px-3 py-3">
+                                <p class="font-serif text-[15px] leading-tight">Uñas en gel</p>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$10</span>
+                            </div>
+                        </button>
+                        <button type="button" onclick="abrirPortafolio('polygel')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                            <img src="media/polygel.jpg" alt="Polygel" class="catalog-thumb">
+                            <div class="px-3 py-3">
+                                <p class="font-serif text-[15px] leading-tight">polygel</p>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$20</span>
+                            </div>
+                        </button>
+                        <button type="button" onclick="abrirPortafolio('acrilico')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                            <img src="media/acrilico.jpg" alt="Acrílico" class="catalog-thumb">
+                            <div class="px-3 py-3">
+                                <p class="font-serif text-[15px] leading-tight">Acrílico</p>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$22</span>
+                            </div>
                         </button>
                     </div>
+                    <p class="mt-4 text-center font-sans text-[10px] text-gray-400 tracking-wide">El nail art extra se cotiza aparte</p>
                 </div>
                 
-                <div class="mt-14 pt-4 flex flex-col items-center gap-5 reveal">
+                <div class="mt-10 pt-4 flex flex-col items-center gap-5 reveal">
                     <p class="text-xs text-gray-500 font-sans tracking-[0.12em]">Sígueme en Instagram</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Amy" class="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-gradient-to-br from-nude-200 to-nude-100 text-dark hover:from-accent hover:to-[#b8896a] hover:text-white shadow-[var(--shadow-warm-sm)] transition-all duration-500 shrink-0 active:scale-95">
+                    <a href="https://www.instagram.com/amys_tudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Amy's Studio (@amys_tudio)" class="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-gradient-to-br from-nude-200 to-nude-100 text-dark hover:from-accent hover:to-[#b8896a] hover:text-white shadow-[var(--shadow-warm-sm)] transition-all duration-500 shrink-0 active:scale-95">
                         <i class="fa-brands fa-instagram text-[1.35rem]"></i>
                     </a>
-                    <p class="font-sans text-[10px] text-gray-400 tracking-wide">@amy · pendiente</p>
+                    <p class="font-sans text-[10px] text-gray-400 tracking-wide">@amys_tudio</p>
                 </div>
             </section>
         </div>
@@ -485,40 +473,61 @@
     </div>
 
     <script>
-        // TODO: número de WhatsApp de Amy (código país + número, sin + ni espacios)
-        const telefonoAmy = "593000000000";
+        const telefonoAmy = "593968049787";
 
         const portafolios = {
-            manicure: {
-                titulo: 'Manicure clásica',
-                subtitulo: 'Cuidado, forma y color limpio.',
-                servicio: 'Manicure clásica',
+            rubber: {
+                titulo: 'rubber base',
+                subtitulo: 'Sin extensión · desde $10',
+                servicio: 'rubber base (sin extensión)',
                 items: [
-                    { type: 'image', src: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=800&auto=format&fit=crop', alt: 'Manicure clásica — ejemplo' },
+                    { type: 'image', src: 'media/rubber-base.png', alt: 'Rubber base' },
+                    { type: 'image', src: 'media/trabajo-1.png', alt: 'Trabajo Amy\'s Studio' },
+                ],
+            },
+            builder: {
+                titulo: 'builder gel',
+                subtitulo: 'Desde $15',
+                servicio: 'builder gel',
+                items: [
+                    { type: 'image', src: 'media/builder-gel.jpg', alt: 'Builder gel' },
+                    { type: 'image', src: 'media/trabajo-2.png', alt: 'Trabajo Amy\'s Studio' },
                 ],
             },
             softgel: {
-                titulo: 'Soft gel',
-                subtitulo: 'Brillo natural y duración.',
-                servicio: 'Soft gel',
+                titulo: 'soft gel',
+                subtitulo: 'Desde $14',
+                servicio: 'soft gel',
                 items: [
-                    { type: 'image', src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop', alt: 'Soft gel — ejemplo' },
+                    { type: 'image', src: 'media/soft-gel.png', alt: 'Soft gel' },
+                    { type: 'image', src: 'media/hero.jpg', alt: 'Nail art — Amy\'s Studio' },
+                ],
+            },
+            unasgel: {
+                titulo: 'Uñas en gel',
+                subtitulo: 'Desde $10',
+                servicio: 'Uñas en gel',
+                items: [
+                    { type: 'image', src: 'media/unas-gel.png', alt: 'Uñas en gel' },
+                    { type: 'image', src: 'media/trabajo-1.png', alt: 'Nail art en gel' },
+                ],
+            },
+            polygel: {
+                titulo: 'polygel',
+                subtitulo: 'Desde $20',
+                servicio: 'polygel',
+                items: [
+                    { type: 'image', src: 'media/polygel.jpg', alt: 'Polygel' },
+                    { type: 'image', src: 'media/trabajo-3.jpg', alt: 'Polygel con nail art' },
                 ],
             },
             acrilico: {
                 titulo: 'Acrílico',
-                subtitulo: 'Largo y resistencia a tu medida.',
+                subtitulo: 'Desde $22',
                 servicio: 'Acrílico',
                 items: [
-                    { type: 'image', src: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=800&auto=format&fit=crop', alt: 'Acrílico — ejemplo' },
-                ],
-            },
-            nailart: {
-                titulo: 'Nail art',
-                subtitulo: 'Diseños con carácter.',
-                servicio: 'Nail art',
-                items: [
-                    { type: 'image', src: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop', alt: 'Nail art — ejemplo' },
+                    { type: 'image', src: 'media/acrilico.jpg', alt: 'Acrílico' },
+                    { type: 'image', src: 'media/polygel.jpg', alt: 'Acrílico con diseño' },
                 ],
             },
         };
@@ -527,7 +536,7 @@
 
         function agendar(servicio) {
             servicioActivo = servicio;
-            const mensaje = `¡Hola Amy! ✨ Vengo de tu catálogo digital y me encantaría cotizar el servicio de *${servicio}*. ¿Me ayudas con tu disponibilidad?`;
+            const mensaje = `¡Hola Amy! ✨ Vengo de tu catálogo digital (@amys_tudio) y me encantaría cotizar el servicio de *${servicio}*. ¿Me ayudas con tu disponibilidad?`;
             window.open(`https://wa.me/${telefonoAmy}?text=${encodeURIComponent(mensaje)}`, '_blank');
         }
 

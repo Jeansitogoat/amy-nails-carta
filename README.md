@@ -1,6 +1,6 @@
-# Amy | Carta digital Nails
+# Amy's Studio | Carta digital Nails
 
-Catálogo móvil para manicurista (basado en la plantilla de MJ Makeup). Proyecto **aparte** de María José.
+Catálogo móvil de [@amys_tudio](https://www.instagram.com/amys_tudio/). WhatsApp: +593 96 804 9787.
 
 ## Carpeta
 
@@ -8,7 +8,7 @@ Catálogo móvil para manicurista (basado en la plantilla de MJ Makeup). Proyect
 c:\Users\Usuario\amy-nails-carta\
 ```
 
-No comparte Git, Vercel ni fotos con el proyecto de Majo.
+Proyecto **aparte** de María José.
 
 ## Ver en local
 
@@ -17,17 +17,19 @@ cd c:\Users\Usuario\amy-nails-carta
 npm run dev
 ```
 
-Abre [http://localhost:3001](http://localhost:3001) (puerto distinto al de Majo).
+Abre [http://localhost:3001](http://localhost:3001).
 
-## Checklist para personalizar
+## Catálogo
 
-1. **PDF de Amy** → sacar servicios reales y precios (si aplica).
-2. **WhatsApp** → `telefonoAmy` en `index.html`.
-3. **Instagram** → enlace y @.
-4. **Fotos** → poner en `media/` y actualizar rutas en `portafolios`.
-5. **Textos** → bio, titular del hero, nombres de servicios.
-6. **Repo + Vercel** → `gh repo create amy-nails-carta` y deploy con nombre neutro (`amy-nails-ec`).
+| Servicio | Precio |
+|----------|--------|
+| rubber base (sin extensión) | $10 |
+| builder gel | $15 |
+| soft gel | $14 |
+| Uñas en gel | $10 |
+| polygel | $20 |
+| Acrílico | $22 |
 
-## Compartir con clientes
+## Publicar
 
-Mismo criterio que Majo: **enlace web**, no el archivo HTML suelto.
+Repo + Vercel propios (no reutilizar el de Majo). Compartir **enlace web**, no el HTML suelto.
