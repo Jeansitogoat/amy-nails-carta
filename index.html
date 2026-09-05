@@ -6,10 +6,10 @@
     <title>Amy's Studio | Nails</title>
     
     <meta name="description" content="Amy's Studio — rubber base, builder gel, soft gel, polygel y acrílico. Agenda tu cita por WhatsApp.">
-    <meta name="theme-color" content="#FAFAF8">
+    <meta name="theme-color" content="#100E0B">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,12 +28,15 @@
                         'firma': ['"Dancing Script"', 'cursive'],
                     },
                     colors: {
-                        'nude-50': '#FAFAF8',
-                        'nude-100': '#F3EFEA',
-                        'nude-200': '#E3D5CA',
-                        'nude-300': '#D6CCC2',
-                        'accent': '#C69C7B',
-                        'dark': '#2C2926',
+                        'ink': '#100E0B',
+                        'surface': '#1B1814',
+                        'raised': '#242018',
+                        'gold': '#C9A86A',
+                        'gold-soft': '#D4BC8A',
+                        'ivory': '#EBE4D4',
+                        'muted': '#B5A48A',
+                        'accent': '#C9A86A',
+                        'dark': '#100E0B',
                     }
                 }
             }
@@ -42,8 +45,13 @@
 
     <style>
         :root {
-            --shadow-warm: 0 12px 40px -12px rgba(44, 41, 38, 0.12);
-            --shadow-warm-sm: 0 4px 20px -6px rgba(198, 156, 123, 0.25);
+            --ink: #100E0B;
+            --surface: #1B1814;
+            --raised: #242018;
+            --gold: #C9A86A;
+            --ivory: #EBE4D4;
+            --shadow-warm: 0 16px 48px -16px rgba(0, 0, 0, 0.65);
+            --shadow-warm-sm: 0 4px 24px -6px rgba(201, 168, 106, 0.22);
             --ease-out-expo: cubic-bezier(0.32, 0.72, 0, 1);
             --bar-height: 5.5rem;
             --safe-top: env(safe-area-inset-top, 0px);
@@ -56,6 +64,7 @@
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
             scroll-behavior: smooth;
+            color-scheme: dark;
         }
 
         body {
@@ -65,7 +74,7 @@
             min-height: 100dvh;
             padding-left: var(--safe-left);
             padding-right: var(--safe-right);
-            -webkit-tap-highlight-color: rgba(198, 156, 123, 0.2);
+            -webkit-tap-highlight-color: rgba(201, 168, 106, 0.22);
         }
 
         img, video {
@@ -157,9 +166,9 @@
             padding-left: max(1.25rem, var(--safe-left));
             padding-right: max(1.25rem, var(--safe-right));
             padding-bottom: max(1rem, var(--safe-bottom));
-            background: #ffffff;
-            border-top: 1px solid rgba(227, 213, 202, 0.9);
-            box-shadow: 0 -8px 24px rgba(44, 41, 38, 0.08);
+            background: #100E0B;
+            border-top: 1px solid rgba(201, 168, 106, 0.22);
+            box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.45);
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
@@ -181,21 +190,20 @@
             position: absolute;
             inset: 0;
             z-index: 20;
-            opacity: 0.04;
+            opacity: 0.055;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
         .bezel-outer {
-            padding: 3px;
+            padding: 1px;
             border-radius: 1.25rem;
-            background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(243,239,234,0.95));
-            box-shadow: var(--shadow-warm-sm), inset 0 1px 0 rgba(255,255,255,0.8);
+            background: linear-gradient(145deg, rgba(212, 188, 138, 0.55), rgba(16, 14, 11, 0.9) 42%, rgba(201, 168, 106, 0.35));
+            box-shadow: var(--shadow-warm-sm);
         }
         .bezel-inner {
-            border-radius: calc(1.25rem - 3px);
+            border-radius: calc(1.25rem - 1px);
             overflow: hidden;
-            background: #fff;
-            box-shadow: inset 0 1px 2px rgba(44, 41, 38, 0.04);
+            background: #1B1814;
         }
 
         .hero-media {
@@ -203,7 +211,7 @@
             width: 100%;
             aspect-ratio: 4 / 5;
             overflow: hidden;
-            background: #f3efea;
+            background: #1B1814;
         }
         .hero-media img {
             width: 100%;
@@ -218,12 +226,12 @@
             inset: 0;
             background: linear-gradient(
                 180deg,
-                rgba(44, 41, 38, 0.04) 0%,
-                transparent 28%,
-                transparent 52%,
-                rgba(250, 250, 248, 0.55) 78%,
-                rgba(250, 250, 248, 0.95) 92%,
-                #FAFAF8 100%
+                rgba(16, 14, 11, 0.28) 0%,
+                transparent 26%,
+                transparent 48%,
+                rgba(16, 14, 11, 0.55) 76%,
+                rgba(16, 14, 11, 0.92) 90%,
+                #100E0B 100%
             );
             pointer-events: none;
         }
@@ -243,14 +251,14 @@
             font-weight: 600;
             font-style: italic;
             line-height: 1.25;
-            color: #2C2926;
+            color: #EBE4D4;
             text-wrap: balance;
         }
         .hero-caption .hero-line {
             width: 2.5rem;
             height: 1px;
             margin: 0.65rem auto 0;
-            background: linear-gradient(90deg, transparent, #C69C7B, transparent);
+            background: linear-gradient(90deg, transparent, #C9A86A, transparent);
         }
 
         .gallery-img {
@@ -268,7 +276,7 @@
         }
 
         video.portfolio-video {
-            background: #2C2926;
+            background: #100E0B;
             width: 100%;
             height: 100%;
             -webkit-object-fit: cover;
@@ -300,14 +308,14 @@
             width: 2.5rem;
             height: 2.5rem;
             border-radius: 999px;
-            background: rgba(250, 250, 248, 0.92);
-            border: 1px solid rgba(227, 213, 202, 0.9);
-            color: #2C2926;
+            background: rgba(16, 14, 11, 0.88);
+            border: 1px solid rgba(201, 168, 106, 0.35);
+            color: #EBE4D4;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 3;
-            box-shadow: 0 4px 16px rgba(44, 41, 38, 0.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
         }
         .carousel-nav.prev { left: 0.5rem; }
         .carousel-nav.next { right: 0.5rem; }
@@ -328,11 +336,11 @@
             border: 2px solid transparent;
             opacity: 0.55;
             padding: 0;
-            background: #fff;
+            background: #1B1814;
         }
         .carousel-thumb.is-active {
             opacity: 1;
-            border-color: #C69C7B;
+            border-color: #C9A86A;
         }
         .carousel-thumb img,
         .carousel-thumb video {
@@ -351,7 +359,7 @@
         }
         .service-row:active { transform: scale(0.985); }
         .service-row:focus-visible {
-            outline: 2px solid #C69C7B;
+            outline: 2px solid #C9A86A;
             outline-offset: 2px;
         }
 
@@ -361,19 +369,19 @@
         .service-row:hover .icon-pill,
         .tile-service:hover .icon-pill {
             transform: translateX(2px);
-            background-color: rgba(198, 156, 123, 0.15);
-            color: #C69C7B;
+            background-color: rgba(201, 168, 106, 0.16);
+            color: #C9A86A;
         }
 
         .btn-whatsapp {
-            box-shadow: 0 8px 28px -8px rgba(44, 41, 38, 0.45);
+            box-shadow: 0 8px 28px -8px rgba(201, 168, 106, 0.38);
             transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo), background-color 0.25s ease;
         }
         .btn-whatsapp:hover {
-            box-shadow: 0 12px 32px -10px rgba(44, 41, 38, 0.5);
+            box-shadow: 0 12px 32px -10px rgba(201, 168, 106, 0.45);
         }
         .btn-whatsapp:focus-visible {
-            outline: 2px solid #C69C7B;
+            outline: 2px solid #C9A86A;
             outline-offset: 3px;
         }
 
@@ -390,13 +398,13 @@
         }
     </style>
 </head>
-<body class="bg-nude-50 sm:bg-[#EFEBE6] text-dark antialiased selection:bg-accent selection:text-white">
+<body class="bg-ink text-ivory antialiased selection:bg-gold selection:text-ink">
 
-    <div id="aviso-archivo-local" hidden class="fixed top-0 left-0 right-0 z-[100] bg-dark text-nude-50 px-4 py-3 text-center text-xs leading-relaxed shadow-lg" style="padding-top: max(0.75rem, env(safe-area-inset-top));">
-        Este archivo no se puede compartir solo. Usa el <strong class="text-white">enlace web</strong> (Vercel/GitHub Pages) con internet para ver diseño, fotos y video.
+    <div id="aviso-archivo-local" hidden class="fixed top-0 left-0 right-0 z-[100] bg-raised text-ivory px-4 py-3 text-center text-xs leading-relaxed shadow-lg" style="padding-top: max(0.75rem, env(safe-area-inset-top));">
+        Este archivo no se puede compartir solo. Usa el <strong class="text-gold">enlace web</strong> (Vercel/GitHub Pages) con internet para ver diseño, fotos y video.
     </div>
 
-    <div class="app-shell max-w-md mx-auto bg-nude-50 relative sm:rounded-[1.75rem] sm:my-4 sm:ring-1 sm:ring-nude-200/80">
+    <div class="app-shell max-w-md mx-auto bg-ink relative sm:rounded-[1.75rem] sm:my-4 sm:ring-1 sm:ring-gold/20">
 
         <div class="grain" aria-hidden="true"></div>
 
@@ -423,102 +431,105 @@
                     </div>
                 </div>
                 
-                <div class="safe-x px-6 sm:px-7 pt-6 pb-2 relative z-10 text-center">
-                    <p class="font-sans text-[15px] text-gray-700 leading-[1.75] text-pretty text-justify mb-4">
-                        ¡Hola! Soy <strong class="text-dark font-medium">Amy</strong>, de <strong class="text-dark font-medium">Amy's Studio</strong>.
+                <div class="safe-x px-6 sm:px-7 pt-5 pb-2 relative z-10 text-center">
+                    <div class="mx-auto mb-6 w-[4.75rem] h-[4.75rem] rounded-full overflow-hidden ring-1 ring-gold/35">
+                        <img src="media/logo.png" alt="Amy's Studio — monograma AON" class="w-full h-full object-cover scale-[1.18]" width="76" height="76">
+                    </div>
+                    <p class="font-sans text-[15px] text-muted leading-[1.8] text-pretty text-justify mb-4">
+                        ¡Hola! Soy <strong class="text-ivory font-medium">Amy</strong>, de <strong class="text-ivory font-medium">Amy's Studio</strong>.
                     </p>
-                    <p class="font-sans text-[15px] text-gray-700 leading-[1.75] text-pretty text-justify mb-4">
+                    <p class="font-sans text-[15px] text-muted leading-[1.8] text-pretty text-justify mb-4">
                         Me apasiona el cuidado y el diseño de uñas. Trabajo con acabados limpios, duraderos y a tu estilo: desde un nude elegante hasta nail art con personalidad.
                     </p>
-                    <p class="font-sans text-[15px] text-gray-700 leading-[1.75] text-pretty text-justify mb-8">
+                    <p class="font-sans text-[15px] text-muted leading-[1.8] text-pretty text-justify mb-8">
                         Toca un servicio para ver resultados y cotizar por WhatsApp. Precios desde el catálogo; el diseño extra se cotiza aparte.
                     </p>
                     
-                    <div class="w-10 h-px bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-4"></div>
-                    <p class="font-firma text-[2rem] text-accent mb-1">Amy</p>
-                    <p class="font-sans text-[10px] tracking-[0.25em] uppercase text-gray-500 mb-8">Nail Artist</p>
+                    <div class="w-10 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-4"></div>
+                    <p class="font-firma text-[2rem] text-gold mb-1">Amy</p>
+                    <p class="font-sans text-[10px] tracking-[0.25em] uppercase text-gold-soft/70 mb-8">Nail Artist</p>
                 </div>
             </header>
 
             <section class="safe-x px-5 sm:px-6 scroll-pad-bottom">
                 <div class="text-center mb-10 reveal">
-                    <span class="inline-block font-sans text-[10px] uppercase tracking-[0.22em] text-accent bg-nude-100/80 px-3 py-1 rounded-full mb-3">Catálogo</span>
-                    <h2 class="font-serif text-[1.65rem] text-balance mb-2">Mis servicios</h2>
-                    <p class="text-xs text-gray-500 font-sans tracking-wide">Explora resultados o cotiza por WhatsApp</p>
+                    <span class="inline-block font-sans text-[10px] uppercase tracking-[0.22em] text-gold bg-raised px-3 py-1 rounded-full mb-3 ring-1 ring-gold/20">Catálogo</span>
+                    <h2 class="font-serif text-[1.65rem] text-ivory text-balance mb-2">Mis servicios</h2>
+                    <p class="text-xs text-muted font-sans tracking-wide">Explora resultados o cotiza por WhatsApp</p>
                 </div>
 
                 <div class="mb-10 reveal">
                     <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                        <button type="button" onclick="abrirPortafolio('rubber')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                        <button type="button" onclick="abrirPortafolio('rubber')" class="text-left bg-raised rounded-2xl overflow-hidden border border-gold/15 hover:border-gold/50 active:scale-[0.98] transition">
                             <img src="media/rubber-base.png" alt="Rubber base" class="catalog-thumb">
                             <div class="px-3 py-3">
                                 <p class="font-serif text-[15px] leading-tight">rubber base</p>
-                                <p class="font-sans text-[10px] text-gray-500 mt-0.5">sin extensión</p>
-                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$10</span>
+                                <p class="font-sans text-[10px] text-muted/80 mt-0.5">sin extensión</p>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-ink text-gold px-2.5 py-0.5 rounded-md ring-1 ring-gold/25">$10</span>
                             </div>
                         </button>
-                        <button type="button" onclick="abrirPortafolio('builder')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                        <button type="button" onclick="abrirPortafolio('builder')" class="text-left bg-raised rounded-2xl overflow-hidden border border-gold/15 hover:border-gold/50 active:scale-[0.98] transition">
                             <img src="media/builder-1.png" alt="Builder gel" class="catalog-thumb">
                             <div class="px-3 py-3">
                                 <p class="font-serif text-[15px] leading-tight">builder gel</p>
-                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$15</span>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-ink text-gold px-2.5 py-0.5 rounded-md ring-1 ring-gold/25">$15</span>
                             </div>
                         </button>
-                        <button type="button" onclick="abrirPortafolio('softgel')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                        <button type="button" onclick="abrirPortafolio('softgel')" class="text-left bg-raised rounded-2xl overflow-hidden border border-gold/15 hover:border-gold/50 active:scale-[0.98] transition">
                             <img src="media/soft-gel.png" alt="Soft gel" class="catalog-thumb">
                             <div class="px-3 py-3">
                                 <p class="font-serif text-[15px] leading-tight">soft gel</p>
-                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$14</span>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-ink text-gold px-2.5 py-0.5 rounded-md ring-1 ring-gold/25">$14</span>
                             </div>
                         </button>
-                        <button type="button" onclick="abrirPortafolio('unasgel')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                        <button type="button" onclick="abrirPortafolio('unasgel')" class="text-left bg-raised rounded-2xl overflow-hidden border border-gold/15 hover:border-gold/50 active:scale-[0.98] transition">
                             <img src="media/unas-gel-1.png" alt="Uñas en gel" class="catalog-thumb">
                             <div class="px-3 py-3">
                                 <p class="font-serif text-[15px] leading-tight">Uñas en gel</p>
-                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$10</span>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-ink text-gold px-2.5 py-0.5 rounded-md ring-1 ring-gold/25">$10</span>
                             </div>
                         </button>
-                        <button type="button" onclick="abrirPortafolio('polygel')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                        <button type="button" onclick="abrirPortafolio('polygel')" class="text-left bg-raised rounded-2xl overflow-hidden border border-gold/15 hover:border-gold/50 active:scale-[0.98] transition">
                             <img src="media/polygel-1.png" alt="Polygel" class="catalog-thumb">
                             <div class="px-3 py-3">
                                 <p class="font-serif text-[15px] leading-tight">polygel</p>
-                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$20</span>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-ink text-gold px-2.5 py-0.5 rounded-md ring-1 ring-gold/25">$20</span>
                             </div>
                         </button>
-                        <button type="button" onclick="abrirPortafolio('acrilico')" class="text-left bg-white/90 rounded-2xl overflow-hidden border border-nude-100/80 shadow-[0_4px_24px_-8px_rgba(44,41,38,0.08)] hover:border-accent/50 active:scale-[0.98] transition">
+                        <button type="button" onclick="abrirPortafolio('acrilico')" class="text-left bg-raised rounded-2xl overflow-hidden border border-gold/15 hover:border-gold/50 active:scale-[0.98] transition">
                             <img src="media/acrilico-1.png" alt="Acrílico" class="catalog-thumb">
                             <div class="px-3 py-3">
                                 <p class="font-serif text-[15px] leading-tight">Acrílico</p>
-                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-nude-100 text-dark px-2.5 py-0.5 rounded-md">$22</span>
+                                <span class="inline-block mt-2 font-sans text-xs font-semibold bg-ink text-gold px-2.5 py-0.5 rounded-md ring-1 ring-gold/25">$22</span>
                             </div>
                         </button>
                     </div>
-                    <p class="mt-4 text-center font-sans text-[10px] text-gray-400 tracking-wide">El nail art extra se cotiza aparte</p>
+                    <p class="mt-4 text-center font-sans text-[10px] text-muted/80 tracking-wide">El nail art extra se cotiza aparte</p>
                 </div>
                 
                 <div class="mt-10 pt-4 flex flex-col items-center gap-5 reveal">
-                    <p class="text-xs text-gray-500 font-sans tracking-[0.12em]">Sígueme en Instagram</p>
-                    <a href="https://www.instagram.com/amys_tudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Amy's Studio (@amys_tudio)" class="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-gradient-to-br from-nude-200 to-nude-100 text-dark hover:from-accent hover:to-[#b8896a] hover:text-white shadow-[var(--shadow-warm-sm)] transition-all duration-500 shrink-0 active:scale-95">
+                    <p class="text-xs text-muted font-sans tracking-[0.12em]">Sígueme en Instagram</p>
+                    <a href="https://www.instagram.com/amybynails_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Amy's Studio (@amybynails_)" class="inline-flex items-center justify-center w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-raised text-gold ring-1 ring-gold/30 hover:bg-gold hover:text-ink shadow-[var(--shadow-warm-sm)] transition-all duration-500 shrink-0 active:scale-95">
                         <i class="fa-brands fa-instagram text-[1.35rem]"></i>
                     </a>
-                    <p class="font-sans text-[10px] text-gray-400 tracking-wide">@amys_tudio</p>
+                    <p class="font-sans text-[10px] text-muted/80 tracking-wide">@amybynails_</p>
                 </div>
             </section>
         </div>
 
         <!-- ================= VISTA PORTAFOLIO ================= -->
         <div id="view-portfolio" class="hidden min-h-dvh flex flex-col view-enter relative z-10">
-            <header class="sticky top-0 z-40 bg-nude-50/85 backdrop-blur-md border-b border-nude-200/80 safe-x px-4 pt-[max(0.75rem,var(--safe-top))] pb-4">
+            <header class="sticky top-0 z-40 bg-ink/90 backdrop-blur-md border-b border-gold/15 safe-x px-4 pt-[max(0.75rem,var(--safe-top))] pb-4">
                 <div class="flex items-center gap-3">
-                    <button type="button" onclick="volverInicio()" aria-label="Volver" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-nude-200 bg-white shadow-[0_2px_12px_-4px_rgba(44,41,38,0.12)] flex items-center justify-center text-dark hover:border-accent/60 active:scale-95 transition shrink-0">
+                    <button type="button" onclick="volverInicio()" aria-label="Volver" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-gold/25 bg-raised flex items-center justify-center text-ivory hover:border-gold/60 active:scale-95 transition shrink-0">
                         <i class="fa-solid fa-arrow-left text-sm"></i>
                     </button>
                     <div class="min-w-0 flex-1">
-                        <p class="font-sans text-[10px] uppercase tracking-[0.22em] text-accent">Portafolio</p>
-                        <h2 id="portfolio-title" class="font-serif text-[1.35rem] leading-tight truncate"></h2>
+                        <p class="font-sans text-[10px] uppercase tracking-[0.22em] text-gold">Portafolio</p>
+                        <h2 id="portfolio-title" class="font-serif text-[1.35rem] text-ivory leading-tight truncate"></h2>
                     </div>
                 </div>
-                <p id="portfolio-subtitle" class="font-sans text-xs text-gray-500 mt-2 pl-[3.25rem] leading-relaxed text-pretty"></p>
+                <p id="portfolio-subtitle" class="font-sans text-xs text-muted mt-2 pl-[3.25rem] leading-relaxed text-pretty"></p>
             </header>
 
             <main id="portfolio-gallery" class="flex-1 safe-x px-4 py-5 scroll-pad-bottom">
@@ -531,9 +542,9 @@
     <!-- Barra inferior: fuera de .app-shell para que position:fixed funcione bien en iOS/Android -->
     <div id="barra-inferior" class="barra-inferior-dock" role="region" aria-label="Agendar cita">
         <div id="barra-inferior-inner" class="barra-inferior-dock__panel">
-            <button type="button" id="btn-barra-principal" onclick="agendar('Asesoría General')" class="btn-whatsapp w-full bg-dark text-white font-sans font-semibold text-sm py-3.5 pl-5 pr-2 rounded-full active:scale-[0.98] flex items-center justify-between gap-3 min-h-[48px] group">
+            <button type="button" id="btn-barra-principal" onclick="agendar('Asesoría General')" class="btn-whatsapp w-full bg-gold text-ink font-sans font-semibold text-sm py-3.5 pl-5 pr-2 rounded-full active:scale-[0.98] flex items-center justify-between gap-3 min-h-[48px] group">
                 <span id="btn-barra-texto" class="pl-1 text-left leading-tight">Agendar mi cita</span>
-                <span class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/15 transition-colors">
+                <span class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-ink/10 flex items-center justify-center shrink-0 group-hover:bg-ink/15 transition-colors">
                     <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
                 </span>
             </button>
@@ -612,7 +623,7 @@
 
         function agendar(servicio) {
             servicioActivo = servicio;
-            const mensaje = `¡Hola Amy! ✨ Vengo de tu catálogo digital (@amys_tudio) y me encantaría cotizar el servicio de *${servicio}*. ¿Me ayudas con tu disponibilidad?`;
+            const mensaje = `¡Hola Amy! ✨ Vengo de tu catálogo digital (@amybynails_) y me encantaría cotizar el servicio de *${servicio}*. ¿Me ayudas con tu disponibilidad?`;
             window.open(`https://wa.me/${telefonoAmy}?text=${encodeURIComponent(mensaje)}`, '_blank');
         }
 
@@ -725,7 +736,7 @@
                 : '';
             const thumbs = total > 1
                 ? `<div class="carousel-thumbs mt-4">${data.items.map(renderThumb).join('')}</div>
-                   <p class="text-center font-sans text-[10px] text-gray-400 mt-3 tracking-wide">Desliza para ver más</p>`
+                   <p class="text-center font-sans text-[10px] text-muted/80 mt-3 tracking-wide">Desliza para ver más</p>`
                 : '';
 
             gallery.className = 'flex-1 px-4 py-5 scroll-pad-bottom';

@@ -1,6 +1,6 @@
 # Amy's Studio | Carta digital Nails
 
-Catálogo móvil de [@amys_tudio](https://www.instagram.com/amys_tudio/). WhatsApp: +593 96 804 9787.
+Catálogo móvil de [@amybynails_](https://www.instagram.com/amybynails_/). WhatsApp: +593 96 804 9787.
 
 ## Enlace público (para clientes)
 
